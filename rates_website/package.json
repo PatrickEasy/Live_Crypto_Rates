@@ -2,7 +2,7 @@
   "name": "rates_website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://YOUR_USERNAME.github.io/Live_Crypto_Rates",
+  "homepage": "https://PatrickEasy.github.io/Live_Crypto_Rates",
   "description": "A simple React application to display rates.",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
