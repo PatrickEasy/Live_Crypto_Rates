@@ -1,38 +1,154 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #121212; /* dark grey background */
+  color: #00FF00; /* bright green text */
+}
+
 .App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #00FF00;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #222;
+  color: #00FF00;
+  border: 1px solid #00FF00;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+table {
+  margin: auto;
+  width: 90%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #00FF00;
+  padding: 8px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+th {
+  background-color: #1a1a1a;
+  color: #00FF00;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+td {
+  color: #00FF00;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+tr:nth-child(even) {
+  background-color: #181818;
+}
+
+tr:hover {
+  background-color: #292929;
+}
+
+.tooltip-parent {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip-box {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #121212;
+  color: #00FF00;
+  border: 1px solid #00FF00;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  font-family: 'Courier New', monospace;
+  white-space: nowrap;
+  z-index: 10;
+  margin-top: 4px;
+}
+
+.tooltip-parent:hover .tooltip-box {
+  display: block;
+}
+
+/* Positive = green, Negative = red */
+.pos {
+  color: #00FF00;
+}
+
+.neg {
+  color: #FF4444;
+}
+
+.tooltip-parent {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip-box {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #121212;
+  color: #00FF00;
+  border: 1px solid #00FF00;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  font-family: 'Courier New', monospace;
+  white-space: nowrap;
+  box-shadow: 0 0 6px #00FF00;
+  z-index: 10;
+  margin-top: 4px;
+}
+
+.tooltip-parent:hover .tooltip-box {
+  display: block;
+}
+
+.button-group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.button-wrapper {
+  position: relative;
+  padding: 2px; /* needed to simulate the outer double border */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.count-btn {
+  background-color: #222;
+  color: #00FF00;
+  border: 1px solid #00FF00;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 8px 14px;
+  cursor: pointer;
+  box-shadow: none;
+  outline: none;
+}
+
+.count-btn.selected {
+  outline: 2px solid #00FF00;
+  outline-offset: -6px;
 }
