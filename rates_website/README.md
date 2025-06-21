@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# 📟 Crypto Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A terminal-style cryptocurrency dashboard built with React. It fetches real-time market data from cryptorates.ai and displays it in a green-on-black, 1970s-style UI — complete with price deltas, hover tooltips, and selectable result limits.
 
-## Available Scripts
+## 🧰 Features
 
-In the project directory, you can run:
+- Live price, market cap, volume, and rank for up to 1000 coins.
+- Toggleable results: 100, 500, 1000, or all.
+- "Refresh" button to re-fetch data instantly.
+- Hover on 24h/7d change shows old vs new price and market cap.
+- Retro green-on-black theme with monospace styling.
+- Fully deployable via GitHub Pages.
 
-### `npm start`
+## 🚀 Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**🔗 https://patrickeasy.github.io/Live_Crypto_Rates/**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🏁 Getting Started
+### 1. **Fork or Clone the Repo**
+```
+git clone https://github.com/patrickeasy/Live_Crypto_Rates.git
+cd Live_Crypto_Rates
+```
+Or fork it using GitHub’s UI and then clone your fork.
 
-### `npm test`
+### 2. **Install Dependencies**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```npm install```
 
-### `npm run build`
+### 3. **Start the Development Server**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+``` 
+npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Then visit: http://localhost:3000
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ Building and Deploying
+First-Time Setup for GitHub Pages:
 
-### `npm run eject`
+Install gh-pages:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+npm install --save gh-pages
+```
+In your package.json, make sure you have:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+"homepage": "https://patrickeasy.github.io/Live_Crypto_Rates/",
+"scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+    }
+```
+Deploy with:
+```
+npm run deploy
+```
+Then in GitHub:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Go to Settings > Pages
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Set source to the gh-pages branch, root folder
 
-## Learn More
+## 🛠 Updating the Live Site After Changes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Each time you change code:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+git add .
+git commit -m "Describe your change"
+git push origin main
+npm run deploy
+```
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+That will rebuild and re-upload the site to GitHub Pages.
+## 🔍 Tech Stack
 
-### Analyzing the Bundle Size
+- React (create-react-app)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Axios (for HTTP requests)
 
-### Making a Progressive Web App
+- gh-pages (for deployment)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- cryptorates.ai API (with CORS proxy)
 
-### Advanced Configuration
+## 🧪 API Proxy Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Due to CORS restrictions, this project uses:
 
-### Deployment
+https://corsproxy.io/?https://cryptorates.ai/v1/coins/100
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This is for dev/demo use. For production-grade apps, consider setting up your own proxy.
 
-### `npm run build` fails to minify
+## 🎨 Design Philosophy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The visual theme is inspired by:
+
+- 70s/80s monochrome CRT terminals
+
+- Hacker culture aesthetics
+
+- Minimalism and legibility
+
+Colors, fonts, and hover effects are all chosen for nostalgia and clarity.
+
+## 🤔 Why 4 Buttons?
+
+The result count selector lets users switch between:
+
+- Top 100, 500, 1000 coins, or
+- All available entries
+
+Changing this also updates the page heading automatically.
+## 🧼 Code Quality Tips
+
+- App.js contains all the main logic and rendering
+
+- CSS is written in App.css with retro-friendly variables and transitions
+
+- You can refactor into separate components if you want to scale the UI
+
+##❓ Questions or Ideas?
+
+Open an [issue](https://github.com/patrickeasy/Live_Crypto_Rates) or fork and improve!
+
+## 📄 License
+
+MIT — free to use, fork, remix, and re-style.
