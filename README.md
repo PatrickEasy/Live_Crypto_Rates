@@ -125,7 +125,7 @@ Changing this also updates the page heading automatically.
 
 ##❓ Questions or Ideas?
 
-Open an [issue](https://github.com/patrickeasy/Live_Crypto_Rates) or fork and improve!
+Open an [issue](https://github.com/PatrickEasy/Live_Crypto_Rates/issues) or fork and improve!
 
 ## 📄 License
 
