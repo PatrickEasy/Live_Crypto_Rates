@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Live_Crypto_Rates/static/css/main.443858ed.css",
+    "main.js": "/Live_Crypto_Rates/static/js/main.dd1d1365.js",
+    "static/js/453.084e8d70.chunk.js": "/Live_Crypto_Rates/static/js/453.084e8d70.chunk.js",
+    "index.html": "/Live_Crypto_Rates/index.html",
+    "main.443858ed.css.map": "/Live_Crypto_Rates/static/css/main.443858ed.css.map",
+    "main.dd1d1365.js.map": "/Live_Crypto_Rates/static/js/main.dd1d1365.js.map",
+    "453.084e8d70.chunk.js.map": "/Live_Crypto_Rates/static/js/453.084e8d70.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.443858ed.css",
+    "static/js/main.dd1d1365.js"
+  ]
+}
